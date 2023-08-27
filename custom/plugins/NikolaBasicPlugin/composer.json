@@ -1,0 +1,18 @@
+{
+  "name": "nikola/basic-plugin",
+  "description": "Nikola plugin",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Nikola\\BasicPlugin\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "Nikola\\BasicPlugin\\NikolaBasicPlugin",
+    "label": {
+      "de-DE": "Nikola plugin",
+      "en-GB": "Nikola plugin"
+    }
+  }
+}

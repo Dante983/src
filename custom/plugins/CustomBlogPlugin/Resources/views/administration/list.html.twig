@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/layout/administration.html.twig' %}
+
+{% block content %}
+    <div class="sw-card">
+        <header class="sw-card__header">
+            <h3 class="sw-card__title">{{ "custom_blog_plugin.list"|trans }}</h3>
+        </header>
+        <div class="sw-card__content">
+            <table>
+                <!-- Table content... -->
+                {% for post in posts %}
+                    <tr>
+                        <td>{{ post.title }}</td>
+                        <td>{{ post.publishDate }}</td>
+                        <td>{{ post.status }}</td>
+                        <td>
+                            <a href="{{ path('custom_blog.edit', { postId: post.id }) }}">{{ "Edit Post"|trans }}</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

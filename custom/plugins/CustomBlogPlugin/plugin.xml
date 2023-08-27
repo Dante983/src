@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://shopware.com/schema/plugin"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://shopware.com/schema/plugin http://www.shopware.com/schema/plugin/plugin-1.0.xsd">
+    <name>CustomBlogPlugin</name>
+    <label>Custom Blog Plugin</label>
+    <version>1.0.0</version>
+    <active>true</active>
+    <author>Your Name</author>
+
+    <administration>
+    <menu>
+        <item name="custom-blog-plugin" route="custom_blog_plugin.list">
+            <label>Custom Blog Plugin</label>
+            <icon>default-text</icon>
+            <parent>sw-content</parent>
+        </item>
+    </menu>
+</administration>
+
+</plugin>

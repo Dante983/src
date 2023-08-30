@@ -1,0 +1,8 @@
+{# @CustomBlogPlugin/admin/list.html.twig #}
+{% block sw_admin_menu_overview_list %}
+    <sw-entity-listing
+        entity="custom_blog_post" {# Use the correct entity name here #}
+        :columns="columns"
+        :dataSource="dataSource"
+    ></sw-entity-listing>
+{% endblock %}

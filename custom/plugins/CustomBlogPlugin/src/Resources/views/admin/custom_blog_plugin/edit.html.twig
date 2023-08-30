@@ -1,0 +1,13 @@
+{# @CustomBlogPlugin/admin/edit.html.twig #}
+{% block sw_admin_menu_detail %}
+    <sw-card-view>
+        <template #header>{{ 'custom-blog-plugin.edit.title' | trans }}</template>
+        <template #content>
+            <sw-form
+                :entity="entity"
+                :repositoryFactory="repositoryFactory"
+                :repositorySearchFunction="repositorySearchFunction"
+            ></sw-form>
+        </template>
+    </sw-card-view>
+{% endblock %}

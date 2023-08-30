@@ -31,10 +31,10 @@ class CustomBlogController extends AbstractController
      */
     public function createPostAction(Request $request): Response
     {
-        // Your logic to prepare any data needed for the template
+        
 
         return $this->render('@CustomBlogPlugin/administration/custom_blog_plugin/create_post.html.twig', [
-            // Pass any variables needed by the Twig template
+            
         ]);
     } 
 
@@ -43,28 +43,28 @@ class CustomBlogController extends AbstractController
      */
     public function listAction(Request $request): Response
     {
-        // Fetch your blog posts from the database or any other source
+        // Fetch blog posts from the database
         $posts = $this->fetchBlogPosts();
 
         return $this->render('@CustomBlogPlugin/administration/list.html.twig', [
-            'posts' => $posts, // Pass the fetched blog posts to the template
+            'posts' => $posts, // Pass blog posts to the template
         ]);
     }
 
     private function fetchBlogPosts()
     {
-        // Create a criteria to fetch the blog posts
+        
         $criteria = new Criteria();
-        // Optionally, you can add sorting or filtering here if needed
+        
 
-        // Fetch the blog posts using the repository
+        // Fetch the blog posts 
         $context = Context::createDefaultContext();
         $blogPosts = $this->blogPostRepository->search($criteria, $context);
 
         return $blogPosts;
     }
 
-    // Add these methods to the CustomBlogController.php
+   
 
     /**
      * @Route("/admin/custom-blog/{id}", name="custom_blog.edit", methods={"GET"})
@@ -79,7 +79,7 @@ class CustomBlogController extends AbstractController
     //  */
     // public function update(Request $request, string $id): JsonResponse
     // {
-    //     // Handle update logic here
+    //     
     // }
 
     // /**
@@ -87,7 +87,7 @@ class CustomBlogController extends AbstractController
     //  */
     // public function delete(string $id, Context $context): JsonResponse
     // {
-    //     // Handle delete logic here
+    //     
     // }
 
 

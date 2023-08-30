@@ -1,5 +1,5 @@
 import './component/CustomBlogList.vue';
-import './component/CustomBlogEdit.vue';
+import './component/CustomBlogCreate.vue';
 // import './component/CustomBlogCreate.vue';
 import deDE from './snippet/de-DE/de-DE.json';
 import enGB from './snippet/en-GB/en_GB.json';
@@ -13,12 +13,12 @@ Shopware.Module.register('custom-blog-plugin', {
     icon: 'default-text',
     routes: {
         list: {
-            component: 'custom-blog-list', // Register the component name here
+            component: 'custom-blog-list',
             path: 'list',
         },
-        create: { // Add this route for creating a new post
-            component: 'sw-cms-create', // Use an existing Shopware component
-            path: 'custom_blog.create',
+        create: {
+            component: 'custom-blog-create', // Use your new component
+            path: 'create', // Update the path to your preference
         },
         // Other routes...
     },
@@ -52,11 +52,10 @@ Shopware.Module.register('custom-blog-plugin', {
         },
         'custom-blog-edit': {
             component: 'custom-blog-edit' // Register your component here
+        },
+        'custom-blog-create': {
+            component: 'custom-blog-create' // Register your component here
         }
-        // ,
-        // 'custom-blog-create': {
-        //     component: 'custom-blog-create' // Register your component here
-        // }
     },
     snippets: {
         'de-DE': deDE,

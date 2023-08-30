@@ -5,9 +5,9 @@
 .env.local
 .env.local.php
 .env.*.local
-custom/plugins/CustomBlogPlugin/node_modules
-# !custom/plugins/.gitkeep
-# !custom/static-plugins/
+custom/*
+!custom/plugins/.gitkeep
+!custom/static-plugins/
 /public/fonts/*
 !/public/fonts/.gitkeep
 /public/img/*

@@ -24,7 +24,7 @@ class CustomBlogController extends AbstractController
      * @Route("/admin/custom-blog/list", name="custom_blog.list", methods={"GET"})
      */
     public function listAction(Request $request, EntityRepository $blogPostRepository): Response
-    {
+    {dd('asdasdasdas');
         // Fetch your blog posts from the database or any other source
         $posts = $this->fetchBlogPosts($blogPostRepository);
 

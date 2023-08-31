@@ -5,4 +5,6 @@
         https://symfony.com/schema/routing/routing-1.0.xsd">
 
     <import resource="../../Controllers/**/*Controller.php" type="annotation" />
+
+        <route id="custom_blog_list" path="/admin/custom-blog/list" controller="Custom\BlogPlugin\Controllers\CustomBlogController::listAction" methods="GET" />
 </routes>

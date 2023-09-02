@@ -24,10 +24,10 @@ Shopware.Module.register('custom-blog-plugin', {
     },
     navigation: [
         {
-            label: 'custom-blog-plugin.menu.main-catalogues',
+            label: 'custom-blog-plugin.index',
             color: '#ff8800',
             icon: 'default-text',
-            path: 'custom.blog.list',
+            path: 'custom-blog-plugin.index',
             children: [
                 {
                     label: 'custom-blog-plugin.menu.custom-blog',

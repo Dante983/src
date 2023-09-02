@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="Custom\BlogPlugin\Controllers\NikolaCustomController">
+            <argument type="service" id="shopware.data.repository.custom_blog_post" />
+        </service>
+        <service id="Custom\BlogPlugin\Controller\Api\BlogPostController">
+            <!-- Add your dependencies as needed -->
+            <tag name="shopware.controller.api" />
+        </service>
+    </services>
+</container>

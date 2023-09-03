@@ -1,0 +1,16 @@
+{% block swag_basic_example_page %}
+    <sw-page class="swag-example-list">
+        <template slot="content">
+            <h2>Blog Posts</h2>
+            <ul>
+                {% for blogPost in blogPosts %}
+                    <li>
+                        <strong>{{ blogPost.title }}</strong>
+                        <p>{{ blogPost.content }}</p>
+                        <!-- Add edit and delete buttons if needed -->
+                    </li>
+                {% endfor %}
+            </ul>
+        </template>
+    </sw-page>
+{% endblock %}

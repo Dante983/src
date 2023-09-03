@@ -1,0 +1,10 @@
+{# @CustomBlogPlugin/admin/create_post.html.twig #}
+{% block sw_admin_menu_detail %}
+    <sw-card-view>
+        <template #header>{{ 'custom-blog-plugin.create.title' | trans }}</template>
+        <template #content>
+            {# Assuming you have a Vue component named 'CustomBlogCreate' #}
+            <custom-blog-create></custom-blog-create>
+        </template>
+    </sw-card-view>
+{% endblock %}

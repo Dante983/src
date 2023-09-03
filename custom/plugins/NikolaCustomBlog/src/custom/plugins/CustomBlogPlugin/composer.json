@@ -1,0 +1,18 @@
+{
+    "name": "custom/blog-plugin",
+    "description": "Blog plugin",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "autoload": {
+      "psr-4": {
+        "Custom\\BlogPlugin\\": "src/"
+      }
+    },
+    "extra": {
+        "shopware-plugin-class": "Custom\\BlogPlugin\\CustomBlogPlugin",
+      "label": {
+        "de-DE": "Blog plugin",
+        "en-GB": "Blog plugin"
+      }
+    }
+  }

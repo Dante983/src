@@ -1,0 +1,22 @@
+{% sw_extends '@Storefront/layout/administration.html.twig' %}
+
+{% block content %}
+    <div class="sw-card">
+        <header class="sw-card__header">
+            <h3 class="sw-card__title">{{ "custom_blog_plugin.create_new_post"|trans }}</h3>
+        </header>
+        <div class="sw-card__content">
+            <form method="post" action="{{ path('custom_blog_plugin.save_post') }}">
+                <div class="form-group">
+                    <label for="title">{{ "custom_blog_plugin.title"|trans }}</label>
+                    <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="content">{{ "custom_blog_plugin.content"|trans }}</label>
+                    <textarea class="form-control" id="content" name="content"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">{{ "custom_blog_plugin.save"|trans }}</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
